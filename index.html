@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter Sequência</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="caracteresUsuario" placeholder="Digite uma sequência de caracteres">
+
+        <button onclick="verificarCaracteres()">Verificar</button>
+       
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function verificarCaracteres() {
+            const caracteres = document.getElementById('caracteresUsuario').value;
+            const caracteresInvertido = caracteres.split('').reverse().join('');
+
+            document.getElementById('resultado').innerHTML = caracteresInvertido;
+        }
+    </script>
+</body>
+</html>
